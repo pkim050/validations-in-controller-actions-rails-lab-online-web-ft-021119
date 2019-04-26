@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_action :set_authors!, only: [:show, :edit, :update]
+  before_action :set_authors!, only: [:new, :create, :show]
   def show
     @author = Author.find(params[:id])
   end
