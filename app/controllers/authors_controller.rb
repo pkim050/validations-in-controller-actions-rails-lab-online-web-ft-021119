@@ -24,6 +24,6 @@ class AuthorsController < ApplicationController
   end
 
   def set_author!
-    @post = Post.find(params[:id])
+    @author = Author.find(params[:id])
   end
 end
