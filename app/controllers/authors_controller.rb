@@ -1,5 +1,5 @@
 class AuthorsController < ApplicationController
-  before_action :set_request!, only: [:new, :create, :show]
+  before_action :set_author!, only: [:new, :create, :show]
 
   def show
     @author = Author.find(params[:id])
@@ -21,5 +21,9 @@ class AuthorsController < ApplicationController
 
   def author_params
     params.permit(:email, :name)
+  end
+
+  def set_author!
+    @post = Post.find(params[:id])
   end
 end
